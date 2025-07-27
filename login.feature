@@ -10,7 +10,7 @@ Feature: Login na plataforma
     When insiro o usuário "usuario@ebac.com.br"
     And insiro a senha "senha123"
     And clico no botão de login
-    Then devo ser redirecionado para a tela de checkout
+    Then deve ser redirecionado para a tela de checkout
 
   Scenario: Login com usuário ou senha inválidos
     When insiro o usuário "usuario@ebac.com.br"
