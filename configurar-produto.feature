@@ -1,24 +1,24 @@
-Feature: Configurar produto
+Funcionalidade: Configurar produto
   Como cliente da EBAC-SHOP
   Quero selecionar tamanho, cor e quantidade
   Para adicionar um produto ao meu carrinho corretamente
 
 
-  Background:
-    Given que estou na página de um produto da EBAC-SHOP
+  Contexto:
+    Dado que estou na página de um produto da EBAC-SHOP
 
 
-  Scenario: Campos obrigatórios para configurar produto
-    When seleciono uma cor, tamanho e quantidade
-    Then o botão de adicionar ao carrinho deve estar habilitado
+  Cenário: Campos obrigatórios para configurar produto
+    Quando seleciono uma cor, tamanho e quantidade
+    Então o botão de adicionar ao carrinho deve estar habilitado
 
 
-  Scenario: Limitar quantidade máxima por compra
-    When seleciono a quantidade "11"
-    Then deve exibir uma mensagem de erro "Quantidade máxima permitida: 10"
+  Cenário: Limitar quantidade máxima por compra
+    Quando seleciono a quantidade "11"
+    Então deve exibir uma mensagem de erro "Quantidade máxima permitida: 10"
 
 
-  Scenario: Limpar seleção de produto
-    Given que selecionei uma cor, tamanho e quantidade
-    When clico no botão "limpar"
-    Then todas as seleções devem voltar ao estado original
+  Cenário: Limpar seleção de produto
+    Dado que selecionei uma cor, tamanho e quantidade
+    Quando clico no botão "limpar"
+    Então todas as seleções devem voltar ao estado original
